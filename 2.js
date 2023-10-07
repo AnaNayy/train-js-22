@@ -71,9 +71,11 @@ class ProductFactory {
   };
   static createProduct(type, options) {
     switch (type) {
+      //case this.TYPE.BOOK:
       case ProductFactory.TYPE.BOOK:
         return new Book(options);
       case ProductFactory.TYPE.AUDIOBOOK:
+        //case this.TYPE.AUDIOBOOK:
         return new AudioBook(options);
       default:
         throw new Error(`Такого типу продукту не існує: ${type}`);

@@ -22,17 +22,24 @@ class OrderTracker {
   static #orders = [];
 
   static create() {
+    //     // Перевіряємо, чи є вже створений екземпляр класу
+    // if (!this.#instance) {
+    //   // Якщо немає, створюємо новий екземпляр
+    //   this.#instance = new OrderTracker();
     if (!OrderTracker.#instance) {
       OrderTracker.#instance = new OrderTracker();
     }
+    // return this.#instance;
     return OrderTracker.#instance;
   }
 
   static add(item) {
     OrderTracker.#orders.push(item);
+    // this.#orders.push(item);
   }
   static get() {
     return OrderTracker.#orders;
+    //  return this.#orders;
   }
 }
 console.log("Завдання 1 ====================================");
